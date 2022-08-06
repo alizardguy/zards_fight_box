@@ -4,12 +4,17 @@ using System.Threading.Tasks;
 
 partial class SandboxGame : Game
 {
+	//vars and shit
+	public MyHUD MyHUD;
+
 	public SandboxGame()
 	{
 		if ( IsServer )
 		{
 			// Create the HUD
-			//_ = new SandboxHud();
+			_ = new SandboxHud();
+			MyHUD = new MyHUD();
+
 		}
 	}
 
@@ -142,6 +147,15 @@ partial class SandboxGame : Game
 				basePlayer.DevController = new NoclipController();
 			}
 		}
+	}
+
+	[Event.Hotload]
+	public void HotLoadUPdate(){
+		if ( !IsClient) return;
+		MyHUD.Delete();
+		MyHUD = new MyHUD();
+
+
 	}
 
 	[ConCmd.Admin( "respawn_entities" )]

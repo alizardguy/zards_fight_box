@@ -141,6 +141,8 @@ partial class SandboxPlayer : Player
 			}
 		}
 
+	//The ability to drop
+	/*
 		if ( Input.Pressed( InputButton.Drop ) )
 		{
 			var dropped = Inventory.DropActive();
@@ -152,7 +154,10 @@ partial class SandboxPlayer : Player
 				timeSinceDropped = 0;
 			}
 		}
+	*/
 
+	//The ability to No-clip
+	/*
 		if ( Input.Released( InputButton.Jump ) )
 		{
 			if ( timeSinceJumpReleased < 0.3f )
@@ -167,7 +172,10 @@ partial class SandboxPlayer : Player
 		{
 			timeSinceJumpReleased = 1;
 		}
+
+	*/
 	}
+
 
 	Entity lastWeapon;
 

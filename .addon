@@ -15,7 +15,9 @@
     "MinPlayers": 1,
     "GameNetworkType": "Multiplayer",
     "MapSelect": "Unrestricted",
-    "MapList": [],
+    "MapList": [
+      "theplane.vpk"
+    ],
     "RankType": "None",
     "PerMapRanking": false,
     "LeaderboardType": "None",
