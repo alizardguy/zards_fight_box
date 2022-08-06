@@ -129,6 +129,8 @@ partial class SandboxPlayer : Player
 		TickPlayerUse();
 		SimulateActiveChild( cl, ActiveChild );
 
+//The ability to toggle between first and third person
+/*
 		if ( Input.Pressed( InputButton.View ) )
 		{
 			if ( CameraMode is ThirdPersonCamera )
@@ -140,6 +142,7 @@ partial class SandboxPlayer : Player
 				CameraMode = new ThirdPersonCamera();
 			}
 		}
+*/
 
 	//The ability to drop
 	/*
