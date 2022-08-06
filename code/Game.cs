@@ -149,15 +149,6 @@ partial class SandboxGame : Game
 		}
 	}
 
-	[Event.Hotload]
-	public void HotLoadUPdate(){
-		if ( !IsClient) return;
-		MyHUD.Delete();
-		MyHUD = new MyHUD();
-
-
-	}
-
 	[ConCmd.Admin( "respawn_entities" )]
 	public static void RespawnEntities()
 	{
@@ -169,5 +160,11 @@ partial class SandboxGame : Game
 	{
 		//KillFeed.Current?.AddEntry( leftid, left, rightid, right, method );
 	}
+
+[ConCmd.Client( "alizardIsCool" )]
+public static void AlizardIsCoolCMD()
+{
+    Log.Info( $"Thanks {Local.Client.Name}" );
+}
 
 }

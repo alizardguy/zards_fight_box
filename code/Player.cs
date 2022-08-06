@@ -17,7 +17,7 @@ partial class SandboxPlayer : Player
 	/// </summary>
 	public SandboxPlayer()
 	{
-		//Inventory = new Inventory( this );
+		Inventory = new Inventory( this );
 	}
 
 	/// <summary>
